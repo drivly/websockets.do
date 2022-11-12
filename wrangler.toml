@@ -1,0 +1,31 @@
+name = "websockets.do"
+route = { pattern = "*/*", zone_name = "searches.do" }
+worker_dev = false
+usage_model = "unbound"
+account_id = "2dcc5a4f486a50625b4167e90d113158"
+main = "dist/index.mjs"
+compatibility_date = "2022-08-25"
+
+services = [
+    { binding = "CTX", service = "ctx-do", environment = "production" }
+]
+
+[build]
+command = "npm run build"
+
+[build.upload]
+format = "modules"
+
+[durable_objects]
+bindings = [ { name = "ChannelHost", class_name = "ChannelHost"} ]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["ChannelHost"]
+
+[miniflare]
+durable_objects_persist = "./data/"  
+kv_persist = "./data/"
+
+[miniflare.mounts]
+ctx-do = "../ctx.do"

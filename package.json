@@ -1,0 +1,28 @@
+{
+  "name": "websockets.do",
+  "version": "1.0.0",
+  "description": "Create a Websocket Proxy with Cloudflare Workers and Durable Objects",
+  "main": "./src/worker.js",
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "build": "esbuild ./src/worker.js --bundle --format=esm --outfile=dist/index.mjs  --loader:.html=text",
+    "dev": "npx miniflare@latest --watch",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drivly/websockets.do.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drivly/websockets.do/issues"
+  },
+  "homepage": "https://github.com/drivly/websockets.do#readme",
+  "dependencies": {
+    "esbuild": "^0.15.13",
+    "nanoevents": "^7.0.1",
+    "nanoid": "^4.0.0"
+  }
+}
