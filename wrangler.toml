@@ -1,5 +1,5 @@
-name = "websockets.do"
-route = { pattern = "*/*", zone_name = "searches.do" }
+name = "websockets-do"
+route = { pattern = "*/*", zone_name = "websockets.do" }
 worker_dev = false
 usage_model = "unbound"
 account_id = "2dcc5a4f486a50625b4167e90d113158"
