@@ -23,6 +23,6 @@
   "dependencies": {
     "esbuild": "^0.15.13",
     "nanoevents": "^7.0.1",
-    "nanoid": "^4.0.0"
+    "nanoid": "^5.0.9"
   }
 }
