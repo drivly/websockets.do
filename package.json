@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/drivly/websockets.do#readme",
   "dependencies": {
-    "esbuild": "^0.15.13",
+    "esbuild": "^0.25.0",
     "nanoevents": "^7.0.1",
     "nanoid": "^4.0.0"
   }
